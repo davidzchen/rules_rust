@@ -324,7 +324,7 @@ def _rust_binary_impl(ctx):
   """Implementation for rust_binary Skylark rule."""
 
   # Find main.rs.
-  main_rs = _crate_root_src(ctx, ["main.rs"])
+  main_rs = _crate_root_src(ctx, ["main.rs", "build.rs"])
 
   # Output binary
   rust_binary = ctx.outputs.executable
